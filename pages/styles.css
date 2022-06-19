@@ -1,1 +1,4 @@
-
+body {
+	height: 100vh;
+	background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
+}
