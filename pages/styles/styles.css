@@ -5,12 +5,12 @@ body {
 .footer-font {
   font-size: 10px;
 }
+.middle-font {
+  font-size: 0.7rem;
+}
 .font-syuji {
   font-family: "Yuji Syuku", serif;
   font-weight: 500;
-}
-.middle-font {
-  font-size: 0.7rem;
 }
 .btn-red {
   background-color: #dc3545;
