@@ -24,17 +24,6 @@ body {
   font-weight: 500;
 }
 
-.btn-red {
-  background-color: #dc3545;
-  color: #fff;
-  border-radius: 25px;
-}
-
-.btn-red:hover {
-  color: #fff !important;
-  filter: brightness(85%);
-}
-
 a:hover {
   text-decoration: none;
 }
