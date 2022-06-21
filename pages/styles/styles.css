@@ -2,44 +2,89 @@ body {
   font-family: "Yuji Syuku", serif;
   background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
 }
+
+.Mplus {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.scrollview {
+  overflow: scroll;
+}
+
 .footer-font {
   font-size: 10px;
 }
+
 .middle-font {
   font-size: 0.7rem;
 }
+
 .font-syuji {
   font-family: "Yuji Syuku", serif;
   font-weight: 500;
 }
+
 .btn-red {
   background-color: #dc3545;
   color: #fff;
   border-radius: 25px;
 }
+
 .btn-red:hover {
   color: #fff !important;
   filter: brightness(85%);
 }
+
 a:hover {
   text-decoration: none;
 }
+
 .ul-red li {
   color: #dc3545;
   list-style-type: square;
 }
+
 .red-box-border {
   border: thick double #ff0000;
   outline: 0.2rem solid #ff0000;
 }
+
 .about-box-width {
   width: 290px;
 }
+
 .developers-box-width {
   width: 240px;
 }
+
 .omikuji-img {
   height: 15rem;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
 }
 
+/* おみくじページ用 */
+.red-double-border-box {
+  background-color: #fff;
+  width: 280px;
+  height: auto;
+  border: thick double #ff0000;
+  outline: 0.2rem solid #ff0000;
+}
+
+.border-red {
+  height: 2px;
+  background-color: #ffc0cb;
+  width: 100%;
+}
+
+.text-big {
+  font-size: 5rem;
+}
+
+.text-sakura:before {
+  content: "✿ ";
+}
+
+.text-sakura:after {
+  content: " ✿";
+}
