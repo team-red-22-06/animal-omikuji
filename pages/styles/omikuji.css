@@ -1,0 +1,49 @@
+body {
+	font-family: 'Yuji Syuku', serif;
+	background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
+}
+
+.Mplus {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.scrollview {
+	overflow: scroll;
+}
+
+.red-double-border-box {
+	background-color: #fff;
+	width: 280px;
+	height: auto;
+	border: thick double #ff0000;
+	outline: 0.2rem solid #ff0000;
+}
+
+.border-red {
+	height: 2px;
+	background-color: #ffc0cb;
+	width: 100%;
+}
+
+.text-big {
+	font-size: 5rem;
+}
+
+.text-sakura:before {
+	content: "✿ ";
+}
+
+.text-sakura:after {
+	content: " ✿";
+}
+
+.btn-red {
+	background-color: #dc3545;
+	color: #fff;
+	border-radius: 25px;
+}
+
+.btn-red:hover {
+	color: #fff !important;
+	filter: brightness(85%);
+}
