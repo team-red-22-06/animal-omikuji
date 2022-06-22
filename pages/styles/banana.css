@@ -1,0 +1,38 @@
+.banana {
+	width: 200px;
+	height: 200px;
+}
+
+@keyframes open-keyanime {
+
+	/* アニメーションの動き */
+	0% {
+		opacity: 0;
+		/* 透明 */
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.innerAnimation {
+	animation-name: open-keyanime;
+	animation-duration: 3s;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+}
+
+.centerAnimation {
+	animation-name: open-keyanime;
+	animation-duration: 6s;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+}
+
+.outerAnimation {
+	animation-name: open-keyanime;
+	animation-duration: 9s;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+}
