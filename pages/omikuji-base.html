@@ -11,84 +11,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Yuji+Syuku&display=swap" rel="stylesheet">
     <title>omikuji-base</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
 </head>
-
-<!-- Temporary CSS -->
-<style>
-    body{
-        font-family: 'Yuji Syuku', serif;
-        background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
-    }
-    .Mplus{
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-    }
-    .scrollview{
-        overflow: scroll;
-    }
-    .red-double-border-box
-    {
-        background-color: #fff;
-        width:280px;
-        height:auto;
-        border: thick double #ff0000;
-        outline: 0.2rem solid #ff0000;
-    }
-    .border-red{
-        height:2px;
-        background-color:#ffc0cb;
-        width: 100%;
-    }
-    .text-big{
-        font-size: 5rem;
-    }
-    .text-sakura:before{
-        content:"✿ ";
-    }
-    .text-sakura:after{
-        content:" ✿";
-    }
-    .btn-red{
-        background-color: #dc3545;
-        color: #fff;
-        border-radius:25px;
-    }
-    .btn-red:hover{
-        color: #fff!important;
-        filter: brightness(85%);
-    }
-</style>
-<!-- Temporary CSS -->
-
 <body>
     <div class="vh-100 d-flex justify-content-center align-items-center flex-column">
 
         <div class="scrollview p-2">
             <div class="container red-double-border-box my-3 py-3">
-              <div class="d-flex ustify-content-center align-items-center flex-column">
-                <!-- Title -->
-                <p class="h5 text-danger">ソフトウェア開発みくじ</p>
-                <hr class="border-red my-3">
-                <!-- Image -->
-                <img src="./images/tyukiti.png" width="270px">
-                <h1 class="text-danger text-big">凶</h1>
-                <hr class="border-red my-3">
-                <!-- text1 -->
-                <p class="text-danger m-2">関わっているプロジェクトから何だか香ばしい匂いがします。炎上する前になんとか逃げるのが吉。</p>
-                <hr class="border-red my-3">
-                <!-- lucky text -->
-                <p class="text-danger text-sakura m-2">ラッキー言語</p>
-                <h5 class="text-danger">Ruby</h5>
-                <hr class="border-red my-3">
-                <!-- lucky DataBase -->
-                <p class="text-danger text-sakura m-2">ラッキーデータベース</p>
-                <h5 class="text-danger">SQL Server</h5>
-                <hr class="border-red my-3">
-                <!-- lucky editor -->
-                <p class="text-danger text-sakura m-2">ラッキーエディタ</p>
-                <h5 class="text-danger">nano</h5>
-                <hr class="border-red my-3">
-                <a href="" class="btn btn-red my-3">もう一度おみくじを引く</a>
-              </div>
+                <div class="d-flex ustify-content-center align-items-center flex-column">
+                    <!-- Title -->
+                    <p class="h5 text-danger">ソフトウェア開発みくじ</p>
+                    <hr class="border-red my-3">
+                    <!-- Image -->
+                    <img src="./images/tyukiti.png" width="270px">
+                    <h1 class="text-danger text-big">凶</h1>
+                    <hr class="border-red my-3">
+                    <!-- text1 -->
+                    <p class="text-danger m-2">関わっているプロジェクトから何だか香ばしい匂いがします。炎上する前になんとか逃げるのが吉。</p>
+                    <hr class="border-red my-3">
+                    <!-- lucky text -->
+                    <p class="text-danger text-sakura m-2">ラッキー言語</p>
+                    <h5 class="text-danger">Ruby</h5>
+                    <hr class="border-red my-3">
+                    <!-- lucky DataBase -->
+                    <p class="text-danger text-sakura m-2">ラッキーデータベース</p>
+                    <h5 class="text-danger">SQL Server</h5>
+                    <hr class="border-red my-3">
+                    <!-- lucky editor -->
+                    <p class="text-danger text-sakura m-2">ラッキーエディタ</p>
+                    <h5 class="text-danger">nano</h5>
+                    <hr class="border-red my-3">
+                    <a href="index.html" class="btn btn-danger rounded-pill my-3">もう一度おみくじを引く</a>
+                </div>
             </div>
         </div>
 
