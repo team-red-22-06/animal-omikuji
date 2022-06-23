@@ -58,26 +58,42 @@ class Omikuji {
 
     getKeyFromDict (omikujiInfo) {
         // おみくじdictionaryからKeyを抽出し、動物を決めていきます
-        var keys = Object.keys(omikujiInfo);
+        // 引数：omikujiInfo
+        // return: ブタとかヒツジとか
+        let keys = Object.keys(omikujiInfo);
         return keys[ keys.length * Math.random() << 0];
     };
 
     getElementFromList (animalPropertyList) {
-        return animalPropertyList[animalPropertyList.length * Math.random() << 0];
+        // 例：
+        // aboutTemplate: ['ヒツジテンプレート1','ヒツジテンプレート2','ヒツジテンプレート3','ヒツジテンプレート4',]
+        // からテンプレートを一つランダムに持ってくる
+        return animalPropertyList[animalPropertyList.length * Math.random() << 0]
     }
 
     getAnimal () {
         // おみくじに使う動物・関連する情報を取得
+        // 返り値：動物Keyに該当するValue
         return this.omikujiInfo[this.getKeyFromDict(this.omikujiInfo)];
     }
 
     getDisplayInfo () {
-        var animalDict = new Object();
+        // 返り値例：
+        // {
+        //     animalImg: '/pages/images/animals/zou.png',
+        //     aboutTemplate: 'ゾウテンプレート3',
+        //     luckyAnimal: 'luckyAnimalぞう3',
+        //     luckyAction: 'luckyActionぞう1',
+        //     luckyFood: 'luckyFoodぞう3'
+        //   }
+        let animalDict = new Object();
         for (const [key, value] of Object.entries(this.yourAnimal)) {
             if (Array.isArray(value)) {
-                value = this.getElementFromList(value)
+                animalDict[key] = this.getElementFromList(value)
+            } else {
+                animalDict[key] = value
             }
-            animalDict[key] = value
         }
+        return animalDict
     }
 }
