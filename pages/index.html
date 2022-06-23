@@ -22,8 +22,8 @@
 				<img class="light m-4 omikuji-img" src="https://3.bp.blogspot.com/-cPqdLavQBXA/UZNyKhdm8RI/AAAAAAAASiM/NQy6g-muUK0/s800/syougatsu2_omijikuji2.png" />
 			</div>
 			<div class="d-flex justify-content-around align-items-center pt-3 pb-5">
-				<a href="omikuji-base.html">
-					<button id="draw-omikuji" type="button" class="btn btn-danger rounded-pill font-syuji">
+				<a id="randomPage" href="#">
+					<button id="draw-omikuji" type="button" class="btn btn-danger rounded-pill font-syuji" onclick="buttonClick()">
 						おみくじを引く
 					</button>
 				</a>
@@ -49,4 +49,12 @@
 		</div>
 	</footer>
 </div>
+<script>
+	const pageArr = ["daikichi.html", "chukichi.html", "kichi.html", "shoukichi.html", "suekichi.html", "kyou.html"];
+	let i = Math.floor(Math.random() * pageArr.length);
+	const page = document.getElementById("randomPage");
+	const buttonClick = () => {
+		page.setAttribute("href", pageArr[i]);
+	}
+</script>
 </html>
