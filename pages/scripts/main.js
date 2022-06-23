@@ -87,12 +87,11 @@ class Omikuji {
         //     luckyFood: 'luckyFoodぞう3'
         //   }
         let animalDict = new Object();
-        for (const [key, value] of Object.entries(this.yourAnimal)) {
+        for (let [key, value] of Object.entries(this.yourAnimal)) {
             if (Array.isArray(value)) {
-                animalDict[key] = this.getElementFromList(value)
-            } else {
-                animalDict[key] = value
+                value = this.getElementFromList(value)
             }
+            animalDict[key] = value
         }
         return animalDict
     }
