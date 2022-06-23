@@ -36,6 +36,7 @@ const omikujiConfig = {
         luckyFood: ['luckyFoodネコ1','luckyFoodネコ2','luckyFoodネコ3','luckyFoodネコ4'],
     },
     "ヒツジ": {
+        animalImg: '/pages/images/animals/hituji.png',
         aboutTemplate: [
             'ヒツジテンプレート1',
             'ヒツジテンプレート2',
