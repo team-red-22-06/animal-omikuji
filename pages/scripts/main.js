@@ -81,7 +81,3 @@ class Omikuji {
         }
     }
 }
-
-let a = new Omikuji();
-
-a.getDisplayInfo()
