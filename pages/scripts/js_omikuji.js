@@ -38,11 +38,29 @@ class Omikuji {
 }
 
 
-
 let omikujiTest = new Omikuji("大吉", "./images/tyukiti.png", "関わっているプロジェクトから何だか香ばしい匂いがします。炎上する前になんとか逃げるのが吉。", "Ruby", "SQL Server", "nano");
 // console.log(omikujiTest.getOmikujiHtml());
 
+// const target = document.getElementById("omikujiPage");
+// target.classList.add("vh-100", "d-flex", "justify-content-center", "align-items-center", "flex-column")
+
+// target.innerHTML = omikujiTest.getOmikujiHtml();
+
+// おみくじデータの定義
+let daikichi = new Omikuji("大吉", "./images/tyukiti.png", "リリースしたソフトウェアにバグが見つかりますが、再現性が低いためユーザーも上司も誰ひとり気づかないでしょう。見なかったことにするのが吉", "Python", "Oracle Database", "Vscode");;
+let chukichi = new Omikuji("中吉", "./images/chukichi.png", "gitでコンフリクトが発生します!!!が、今回はうまく解消できるでしょう。今回は・・・", "C++", "MySQL", "Emacs");
+let kichi = new Omikuji("吉", "./images/kichi.png", "リリースしたソフトウェアにバグがみつかりますが、幸いユーザー企業のお偉い型は極度のITオンチです。仕様で押し通すのが吉。", "Javascript", "SQL Server", "Vim");
+let suekichi = new Omikuji("末吉", "./images/suekichi.png", "関わっているプロジェクトから何だか香ばしい匂いがします。炎上する前になんとか逃げるのが吉。", "Ruby", "MongoDB", "nano");
+let shoukichi = new Omikuji("小吉", "./images/shoukichi.png", "開発の要件定義が綿飴のようにふわっふわっです。手遅れにならないうちに手を打っておくのが吉", "Java", "PostgreSQL", "Eclipse");
+let kyou = new Omikuji("凶", "./images/kyou.png", "リリースしたソフトウェアに致命的な欠陥がみつかり、それが原因で顧客の機密情報が流出します。仕様で押し通すのはいささか無理があるますので、潔く腹をくくりましょう。", "C", "DB2", "Atom");
+
+// おみくじの中身 大吉と吉はでやすく
+let omikujiList = [daikichi, chukichi, kichi, suekichi, shoukichi, kyou, daikichi, kichi];
+
+// ランダムにおみくじ結果を表示させる。 → 期待挙動通り
+// 本来は TOPページからの onclick で走らせる内容
 const target = document.getElementById("omikujiPage");
 target.classList.add("vh-100", "d-flex", "justify-content-center", "align-items-center", "flex-column")
 
-target.innerHTML = omikujiTest.getOmikujiHtml();
+let i = Math.floor(Math.random() * omikujiList.length);
+target.innerHTML = omikujiList[i].getOmikujiHtml();
