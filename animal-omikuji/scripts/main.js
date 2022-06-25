@@ -2,14 +2,14 @@ const omikujiConfig = {
     "ゾウ": {
         animalImg: '/pages/images/animals/zou.png',
         aboutTemplate: [
-            'ゾウテンプレート1',
-            'ゾウテンプレート2',
-            'ゾウテンプレート3',
-            'ゾウテンプレート4',
+            '君は動物園のスター！恥ずかしがり屋でも色んな友達に会ってみよう',
+            '毎日人を背中に乗せてる君、たまには家でゆっくりするんだゾウ',
+            '誰もが羨ましがる鼻の長さ、ぱおーーん！',
+            '大きな耳を持ったゾウを引いた君は、聞き上手',
         ],
-        luckyAnimal: ['luckyAnimalぞう1', 'luckyAnimalぞう2', 'luckyAnimalぞう3', 'luckyAnimalぞう4'],
-        luckyAction: ['luckyActionぞう1', 'luckyActionぞう2', 'luckyActionぞう3', 'luckyActionぞう4'],
-        luckyFood: ['luckyFoodぞう1', 'luckyFoodぞう2', 'luckyFoodぞう3', 'luckyFoodぞう4'],
+        luckyAnimal: ['キリン', 'サル', '白鳥', 'カメ'],
+        luckyAction: ['タイに行く', 'お散歩', '温泉に行く', '家でゴロゴロ'],
+        luckyFood: ['リンゴ', 'ナシ', 'モモ', 'さくらんぼ'],
     },
     "ブタ": {
         animalImg: '/pages/images/animals/buta.png',
