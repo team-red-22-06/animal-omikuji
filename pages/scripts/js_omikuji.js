@@ -1,66 +1,12 @@
 class Omikuji {
-    constructor(fortune, img, description, luckyLanguage, luckyDatabase, luckyEditor) {
-        this.fortune = fortune;
-        this.img = img;
-        this.description = description;
-        this.luckyLanguage = luckyLanguage;
-        this.luckyDatabase = luckyDatabase;
-        this.luckyEditor = luckyEditor;
-    };
-
-    getTopHtml() {
-        boxElement = document.getElementById('top-page');
-        boxElement.classList.add('vh-100 d-flex justify-content-center align-items-center flex-column');
-        boxElement.append(this.getSectionHTML(), this.getFooterHTML())
-        return boxElement;
-    };
-
-    getSectionHTML() {
-        let sectionElem = document.createElement("section");
-        sectionElem.innerHTML =
-        `
-        <div>
-            <div class="text-center">
-                <h1 class="text-danger font-syuji">ソフトウェア開発</h1>
-                <h1 class="text-danger font-syuji">みくじ</h1>
-                <img class="light m-4 omikuji-img" src="https://3.bp.blogspot.com/-cPqdLavQBXA/UZNyKhdm8RI/AAAAAAAASiM/NQy6g-muUK0/s800/syougatsu2_omijikuji2.png" />
-            </div>
-            <div class="d-flex justify-content-around align-items-center pt-3 pb-5">
-                <a href="omikuji-base.html">
-                    <button id="draw-omikuji" type="button" class="btn btn-danger rounded-pill font-syuji">
-                        おみくじを引く
-                    </button>
-                </a>
-            </div>
-        </div>
-        `
-        return sectionElem
-    };
-
-    getFooterHtml() {
-        let footerElem = document.createElement("footer");
-        footerElem.innerHTML =
-        `
-        <div class="d-flex flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-                <a href="about.html">
-                    <p class="text-danger font-syuji middle-font">このおみくじについて</p>
-                </a>
-                <p class="text-danger middle-font">｜</p>
-                <a href="developers.html">
-                    <p class="text-danger font-syuji text-decoration-none middle-font">開発者一覧</p>
-                </a>
-            </div>
-            <div class="text-center">
-                <p class="footer-font font-syuji text-danger">
-            ©ソフトウェア開発みくじ
-        </p>
-            </div>
-        </div>
-        `
-        return footerElem
-    };
-
+  constructor(fortune, img, description, luckyLanguage, luckyDatabase, luckyEditor) {
+    this.fortune = fortune;
+    this.img = img;
+    this.description = description;
+    this.luckyLanguage = luckyLanguage;
+    this.luckyDatabase = luckyDatabase;
+    this.luckyEditor = luckyEditor;
+  };
 
   getOmikujiHtml() {
     return `
@@ -83,28 +29,13 @@ class Omikuji {
                     <p class="text-danger text-sakura m-2">ラッキーエディタ</p>
                     <h5 class="text-danger">${this.luckyEditor}</h5>
                     <hr class="border-red my-3">
-                    <a href="index.html" class="btn btn-danger rounded-pill my-3">もう一度おみくじを引く</a>
+                    <button class="btn btn-danger rounded-pill my-3" onclick="showTop()">もう一度おみくじを引く</button>
                 </div>
             </div>
         </div>
         `;
   }
 }
-
-let omikujiTest = new Omikuji(
-  "大吉",
-  "./images/tyukiti.png",
-  "関わっているプロジェクトから何だか香ばしい匂いがします。炎上する前になんとか逃げるのが吉。",
-  "Ruby",
-  "SQL Server",
-  "nano"
-);
-// console.log(omikujiTest.getOmikujiHtml());
-
-// const target = document.getElementById("omikujiPage");
-// target.classList.add("vh-100", "d-flex", "justify-content-center", "align-items-center", "flex-column")
-
-// target.innerHTML = omikujiTest.getOmikujiHtml();
 
 // おみくじデータの定義
 let daikichi = new Omikuji(
@@ -168,16 +99,93 @@ let omikujiList = [
   kichi,
 ];
 
-// ランダムにおみくじ結果を表示させる。 → 期待挙動通り
-// 本来は TOPページからの onclick で走らせる内容
-const target = document.getElementById("omikujiPage");
-target.classList.add(
-  "vh-100",
-  "d-flex",
-  "justify-content-center",
-  "align-items-center",
-  "flex-column"
-);
+// TOPページを表示する時の関数
+function showTop() {
+  let top = document.getElementById("top-page");
+  // console.log(top);
+  const topHTML = `
+          <div>
+              <div class="text-center">
+                  <h1 class="text-danger font-syuji">ソフトウェア開発</h1>
+                  <h1 class="text-danger font-syuji">みくじ</h1>
+                  <img class="light m-4 omikuji-img" src="https://3.bp.blogspot.com/-cPqdLavQBXA/UZNyKhdm8RI/AAAAAAAASiM/NQy6g-muUK0/s800/syougatsu2_omijikuji2.png" />
+              </div>
+              <div class="d-flex justify-content-around align-items-center pt-3 pb-5">
+                    <button type="button" class="btn btn-danger rounded-pill font-syuji" onclick="showOmikuji()">
+                        おみくじを引く
+                    </button>
+              </div>
+          </div>
+          <div class="d-flex flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                  <a href="about.html">
+                      <p class="text-danger font-syuji middle-font">このおみくじについて</p>
+                  </a>
+                  <p class="text-danger middle-font">｜</p>
+                  <a href="developers.html">
+                      <p class="text-danger font-syuji text-decoration-none middle-font">開発者一覧</p>
+                  </a>
+              </div>
+              <div class="text-center">
+                <p class="footer-font font-syuji text-danger">
+                  ©ソフトウェア開発みくじ
+                </p>
+              </div>
+          </div>
+  `;
 
-let i = Math.floor(Math.random() * omikujiList.length);
-target.innerHTML = omikujiList[i].getOmikujiHtml();
+  top.innerHTML = topHTML;
+  top.classList.add(
+    "vh-100",
+    "d-flex",
+    "justify-content-center",
+    "align-items-center",
+    "flex-column"
+  );
+
+  let omikuji = document.getElementById("omikuji-page");
+  omikuji.classList.remove(
+    "vh-100",
+    "d-flex",
+    "justify-content-center",
+    "align-items-center",
+    "flex-column"
+  );
+  omikuji.classList.add("d-none");
+  omikuji.innerHTML = "";
+
+  return top;
+}
+
+// おみくじを表示する時の関数
+function showOmikuji() {
+  let omikuji = document.getElementById("omikuji-page");
+
+  omikuji.classList.add(
+    "vh-100",
+    "d-flex",
+    "justify-content-center",
+    "align-items-center",
+    "flex-column",
+    "d-block"
+  );
+
+  let i = Math.floor(Math.random() * omikujiList.length);
+  omikuji.innerHTML = omikujiList[i].getOmikujiHtml();
+
+  // TOPページはおみくじページの表示の際には不要
+  let top = document.getElementById("top-page");
+  top.classList.remove(
+    "vh-100",
+    "d-flex",
+    "justify-content-center",
+    "align-items-center",
+    "flex-column"
+  )
+  top.innerHTML = "";
+
+  return omikuji;
+}
+
+// 初期はTOPページを表示
+showTop();
