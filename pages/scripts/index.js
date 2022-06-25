@@ -40,7 +40,7 @@ class Omikuji {
 // おみくじデータの定義
 let daikichi = new Omikuji(
   "大吉",
-  "./images/tyukiti.png",
+  "./images/daikichi.png",
   "リリースしたソフトウェアにバグが見つかりますが、再現性が低いためユーザーも上司も誰ひとり気づかないでしょう。見なかったことにするのが吉",
   "Python",
   "Oracle Database",
