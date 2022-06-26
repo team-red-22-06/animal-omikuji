@@ -220,7 +220,7 @@ function getOmikujiHtml(obj) {
                     <p class="text-danger m-2">${obj.getDisplayInfo().aboutTemplate}</p>
                     <hr class="border-red my-3">
                     <p class="text-danger text-sakura m-2">ラッキー動物</p>
-                    <h5 class="text-danger">${obj.getDisplayInfo().luckyAction}</h5>
+                    <h5 class="text-danger">${obj.getDisplayInfo().luckyAnimal}</h5>
                     <hr class="border-red my-3">
                     <p class="text-danger text-sakura m-2">ラッキーアクション</p>
                     <h5 class="text-danger">${obj.getDisplayInfo().luckyAction}</h5>
