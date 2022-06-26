@@ -1,5 +1,6 @@
 const omikujiConfig = {
     "ゾウ": {
+        name: 'ゾウ',
         animalImg: './images/animals/zou.png',
         aboutTemplate: [
             '君は動物園のスター！恥ずかしがり屋でも色んな友達に会ってみよう',
@@ -12,6 +13,7 @@ const omikujiConfig = {
         luckyFood: ['リンゴ', 'ナシ', 'モモ', 'さくらんぼ'],
     },
     "ブタ": {
+        name: 'ブタ',
         animalImg: './images/animals/buta.png',
         aboutTemplate: [
             '良くも悪くも普通の日！今日は頑張りすぎず、のんびりと過ごしましょう。',
@@ -24,6 +26,7 @@ const omikujiConfig = {
         luckyFood: ['バナナ', 'カレーライス', 'ササ', 'うまい棒'],
     },
     "ネコ": {
+        name: 'ネコ',
         animalImg: './images/animals/neko.png',
         aboutTemplate: [
             '最近のんびりしがちなあなたは少し早めの行動が大切な一日。遅刻は許されませんよ。',
@@ -36,6 +39,7 @@ const omikujiConfig = {
         luckyFood: ['ビーフジャーキー', '干草', 'リンゴ', '牛丼'],
     },
     "ヒツジ": {
+        name: 'ヒツジ',
         animalImg: './images/animals/hituji.png',
         aboutTemplate: [
             '今日のあなたは超アンラッキーな一日。残念ながら頭が動物になってしまいます',
@@ -48,6 +52,7 @@ const omikujiConfig = {
         luckyFood: [, '寿司', 'ラーメン', 'のり弁', 'アイスクリーム'],
     },
     "イヌ": {
+        name: 'イヌ',
         animalImg: './images/animals/inu.png',
         aboutTemplate: [
             '今日のあなたはブラック系の洋服を身につけることで運気が上昇します。早速お出かけしましょう',
@@ -60,6 +65,7 @@ const omikujiConfig = {
         luckyFood: ['カップ麺', 'ラムネ', 'フォー', 'クッキー'],
     },
     "カバ": {
+        name: 'カバ',
         animalImg: './images/animals/kaba.png',
         aboutTemplate: [
             '新たな恋愛を育む未来が見えます。恋人がいない方は、特に今日という日を重要視して行動するようにしてください。',
@@ -72,6 +78,7 @@ const omikujiConfig = {
         luckyFood: ['紅茶', '和菓子', 'インドカレー', '団子'],
     },
     "コアラ": {
+        name: 'コアラ',
         animalImg: './images/animals/koara.png',
         aboutTemplate: [
             '恋愛運が向上している予感...。ですが、どんだけ頑張っても今日のところは単なる出逢いだけで留まります',
@@ -84,6 +91,7 @@ const omikujiConfig = {
         luckyFood: ['グミ', '炭酸水', 'ホットケーキ', 'たこ焼き'],
     },
     "クマ": {
+        name: 'クマ',
         animalImg: './images/animals/kuma.png',
         aboutTemplate: [
             '仕事でもプライベートでも毎日のようにこなさなくてはいけないことが、なんとなく面倒だと感じる日。今日は一日休みましょう。',
@@ -96,6 +104,7 @@ const omikujiConfig = {
         luckyFood: ['うどん', 'そば', '天丼', 'たくあん'],
     },
     "パンダ": {
+        name: 'パンダ',
         animalImg: './images/animals/panda.png',
         aboutTemplate: [
             '直感を大事にしたい日。人や物に対するこれまでの固定観念を一度手放して、自分がどう感じるかに注目しましょう。',
@@ -108,6 +117,7 @@ const omikujiConfig = {
         luckyFood: ['チョコ', 'せんべい', 'パン', 'ナン'],
     },
     "ペンギン": {
+        name: 'ペンギン',
         animalImg: './images/animals/pengin.png',
         aboutTemplate: [
             '感受性がとても優れている日。自分が感じたことを優先して、物事を判断してください。もしピンとこないなら、やめておくのが正解です。',
@@ -120,6 +130,7 @@ const omikujiConfig = {
         luckyFood: ['からし', 'わさび', '甘酒', '焼き芋'],
     },
     "ライオン": {
+        name: 'ライオン',
         animalImg: './images/animals/raion.png',
         aboutTemplate: [
             '友人とのおしゃべりなどよりも、部屋を整えることを優先したい日です。汚れている場所を探してみましょう。',
@@ -132,6 +143,7 @@ const omikujiConfig = {
         luckyFood: ['トマト', 'アイスキャンディー', 'コカ・コーラ', 'するめ'],
     },
     "リス": {
+        name: 'リス',
         animalImg: './images/animals/risu.png',
         aboutTemplate: [
             '良い物を人と分かち合える一日。周囲にもっと仲良くなりたいと感じる人がいたら、あなたのお気に入りのアイテムをプレゼントしてみると効果的です。',
@@ -171,7 +183,7 @@ class Omikuji {
 
     getAnimal() {
         // おみくじに使う動物・関連する情報を取得
-        // 返り値：動物Keyに該当するValue
+        // 返り値：動物Keyに該当するValue → 検証したところObjectが返ってきました。
         return this.omikujiInfo[this.getKeyFromDict(this.omikujiInfo)];
     }
 
@@ -193,39 +205,35 @@ class Omikuji {
         }
         return animalDict
     }
+}
 
-    getOmikujiHtml() {
-        return `
+function getOmikujiHtml(obj) {
+    return `
         <div class="scrollview p-2">
             <div class="container red-double-border-box my-3 py-3">
                 <div class="d-flex ustify-content-center align-items-center flex-column">
                     <p class="h5 text-danger">動物占いみくじ</p>
                     <hr class="border-red my-3">
-                    <img src="${this.getDisplayInfo().animalImg}" width="270px">
-                    <h1 class="text-danger text-big">${this.yourAnimal}</h1>
+                    <img src="${obj.getDisplayInfo().animalImg}" width="270px">
+                    <h1 class="text-danger text-big">${obj.getDisplayInfo().name}</h1>
                     <hr class="border-red my-3">
-                    <p class="text-danger m-2">${this.getDisplayInfo().aboutTemplate}</p>
+                    <p class="text-danger m-2">${obj.getDisplayInfo().aboutTemplate}</p>
                     <hr class="border-red my-3">
                     <p class="text-danger text-sakura m-2">ラッキー動物</p>
-                    <h5 class="text-danger">${this.getDisplayInfo().luckyAction}</h5>
+                    <h5 class="text-danger">${obj.getDisplayInfo().luckyAction}</h5>
                     <hr class="border-red my-3">
                     <p class="text-danger text-sakura m-2">ラッキーアクション</p>
-                    <h5 class="text-danger">${this.getDisplayInfo().luckyAction}</h5>
+                    <h5 class="text-danger">${obj.getDisplayInfo().luckyAction}</h5>
                     <hr class="border-red my-3">
                     <p class="text-danger text-sakura m-2">ラッキーフード</p>
-                    <h5 class="text-danger">${this.getDisplayInfo().luckyFood}</h5>
+                    <h5 class="text-danger">${obj.getDisplayInfo().luckyFood}</h5>
                     <hr class="border-red my-3">
                     <button class="btn btn-danger rounded-pill my-3" onclick="showTop()">もう一度おみくじを引く</button>
                 </div>
             </div>
         </div>
         `;
-    }
 }
-
-let omikuji = new Omikuji();
-console.log(omikuji.getKeyFromDict(omikujiConfig));
-// console.log(omikuji.getAnimal());
 
 // TOPページを表示する時の関数
 function showTop() {
@@ -298,9 +306,8 @@ function showOmikuji() {
     );
 
     // 呼び出し方を検討
-    // let i = Math.floor(Math.random() * omikujiList.length);
-    // getDisplayInfo
-    omikujiEle.innerHTML = omikuji.getOmikujiHtml();
+    let omikuji = new Omikuji();
+    omikujiEle.innerHTML = getOmikujiHtml(omikuji);
 
     // TOPページはおみくじページの表示の際には不要
     let top = document.getElementById("top-page");
