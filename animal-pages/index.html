@@ -13,42 +13,8 @@
 	<link rel="stylesheet" href="./styles/styles.css" />
 </head>
 <body>
-	<div class="vh-100 d-flex justify-content-center align-items-center flex-column">
-		<section>
-			<div>
-				<div class="text-center">
-					<h1 class="text-danger font-syuji">動物占い</h1>
-					<h1 class="text-danger font-syuji">みくじ</h1>
-					<img class="light m-4 omikuji-img" src="https://3.bp.blogspot.com/-cPqdLavQBXA/UZNyKhdm8RI/AAAAAAAASiM/NQy6g-muUK0/s800/syougatsu2_omijikuji2.png" />
-				</div>
-				<div class="d-flex justify-content-around align-items-center pt-3 pb-5">
-					<a id="randomPage" href="#">
-						<button id="draw-omikuji" type="button" class="btn btn-danger rounded-pill font-syuji" onclick="buttonClick()">
-							おみくじを引く
-						</button>
-					</a>
-				</div>
-			</div>
-		</section>
-		<footer>
-			<div class="d-flex flex-column">
-				<div class="d-flex justify-content-center align-items-center">
-					<a href="about.html">
-						<p class="text-danger font-syuji middle-font">このおみくじについて</p>
-					</a>
-					<p class="text-danger middle-font">｜</p>
-					<a href="developers.html">
-						<p class="text-danger font-syuji text-decoration-none middle-font">開発者一覧</p>
-					</a>
-				</div>
-				<div class="text-center">
-					<p class="footer-font font-syuji text-danger">
-            ©動物占いみくじ
-          </p>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<script src="./scripts/index.js"></script>
+	<div id="top-page"></div>
+	<div id="omikuji-page"></div>
+	<script src="./scripts/main.js"></script>
 </body>
 </html>
