@@ -207,6 +207,12 @@ class Omikuji {
     }
 }
 
+function getAnimation() {
+    const animationList = ['rotate', 'bound'];
+    let oneOrZero = (Math.random()>=0.5)? 1 : 0;
+    return animationList[oneOrZero];
+}
+
 function getOmikujiHtml(obj) {
     return `
         <div class="scrollview p-2">
@@ -214,7 +220,7 @@ function getOmikujiHtml(obj) {
                 <div class="d-flex ustify-content-center align-items-center flex-column">
                     <p class="h5 text-danger">動物占いみくじ</p>
                     <hr class="border-red my-3">
-                    <img src="${obj.getDisplayInfo().animalImg}" width="270px">
+                    <img class="${getAnimation()}" src="${obj.getDisplayInfo().animalImg}" width="270px">
                     <h1 class="text-danger text-big">${obj.getDisplayInfo().name}</h1>
                     <hr class="border-red my-3">
                     <p class="text-danger m-2">${obj.getDisplayInfo().aboutTemplate}</p>
