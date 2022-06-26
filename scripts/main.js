@@ -250,7 +250,7 @@ function showTop() {
     const topHTML = `
             <div>
             <div class="text-center">
-                <h1 class="text-danger font-syuji">ソフトウェア開発</h1>
+                <h1 class="text-danger font-syuji">動物占い</h1>
                 <h1 class="text-danger font-syuji">みくじ</h1>
                 <img class="light m-4 omikuji-img" src="./images/omikuji.png" />
             </div>
