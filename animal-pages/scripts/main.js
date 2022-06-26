@@ -208,6 +208,9 @@ class Omikuji {
 }
 
 function getAnimation() {
+    //'rotate'もしくは'bound'をランダムに持ってくる
+    // 返り値
+    // 例：'bound'
     const animationList = ['rotate', 'bound'];
     let oneOrZero = (Math.random()>=0.5)? 1 : 0;
     return animationList[oneOrZero];
