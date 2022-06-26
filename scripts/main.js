@@ -212,7 +212,7 @@ function getAnimation() {
     // 返り値
     // 例：'bound'
     const animationList = ['rotate', 'bound'];
-    let oneOrZero = (Math.random()>=0.5)? 1 : 0;
+    let oneOrZero = (Math.random() >= 0.5) ? 1 : 0;
     return animationList[oneOrZero];
 }
 
@@ -272,7 +272,7 @@ function showTop() {
             </div>
             <div class="text-center">
                 <p class="footer-font font-syuji text-danger">
-                    ©ソフトウェア開発みくじ
+                    ©動物占いみくじ
                 </p>
             </div>
         </div>
